@@ -1,0 +1,4 @@
+<h2><%= @list.name %></h2>
+<%# liste des noms des movies qui sont dedans %>
+
+<center><%= link_to "Back to lists", lists_path, class: "btn btn-ghost" %><%= link_to "Supprimer", list_path(@list), class: "btn btn-ghost", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></center>

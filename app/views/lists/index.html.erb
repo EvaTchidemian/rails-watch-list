@@ -1,0 +1,10 @@
+<center><h1>WatchLists</h1></center>
+<div class="container">
+  <% @lists.each do |list| %>
+    <div class="card-category my-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80)">
+        <%= link_to list.name, list_path(list), class: "linkto" %>
+    </div>
+  <% end %>
+
+<center><%= link_to "add a new list", new_list_path, class: "btn btn-ghost" %></center>
+</div>
