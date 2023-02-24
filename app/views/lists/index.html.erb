@@ -1,10 +1,17 @@
-<center><h1>WatchLists</h1></center>
-<div class="container">
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-black">
+    <h1>WatchLists</h1>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">Mes Listes</h3>
+    <%= link_to "add a new list", new_list_path, class: "btn btn-ghost" %>
+  </div>
   <% @lists.each do |list| %>
-    <div class="card-category my-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80)">
+    <div class="card-category my-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1575578285291-905e55d5a789?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80)">
         <%= link_to list.name, list_path(list), class: "linkto" %>
     </div>
   <% end %>
-
-<center><%= link_to "add a new list", new_list_path, class: "btn btn-ghost" %></center>
 </div>

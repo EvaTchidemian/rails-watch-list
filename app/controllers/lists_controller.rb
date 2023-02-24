@@ -6,6 +6,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmarks = @list.bookmarks
   end
 
   def new
@@ -14,8 +15,11 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    @list.save
-    redirect_to lists_path, status: :see_other
+    if @list.save
+      redirect_to list_path(@list)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -29,7 +33,4 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:name)
   end
-
-
-
 end

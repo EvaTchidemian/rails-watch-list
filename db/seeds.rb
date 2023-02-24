@@ -16,7 +16,7 @@ Movie.destroy_all
 # Créer 10 films aléatoires
 10.times do
   title = Faker::Movie.title
-  poster_url = Faker::Internet.url
+  poster_url = Faker::LoremFlickr.image(search_terms: ['movies'])
   rating = Faker::Number.between(from: 1, to: 5)
   overview = Faker::Lorem.sentences(number: 1)
 
