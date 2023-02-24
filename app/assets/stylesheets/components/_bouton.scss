@@ -3,11 +3,17 @@
   color: white;
 }
 
+a:-webkit-any-link {
+  color: white;
+  cursor: pointer;
+
+}
+
 .btn-ghost {
   color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
+  border: 1px solid white;
+  padding: 8px 16px;
+  border-radius: 40px;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
